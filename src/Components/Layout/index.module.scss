@@ -1,0 +1,5 @@
+@import "/public/assets/style/variables";
+
+.layout {
+  @include display-content(flex, space-between, null);
+}

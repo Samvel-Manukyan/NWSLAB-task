@@ -1,0 +1,26 @@
+@import "/public/assets/style/variables";
+
+.sidebar {
+  width: 180px;
+  height: 100vh;
+  border-bottom-right-radius: 8px;
+  border-top-right-radius: 8px;
+  background-color: $primary-color;
+  @include display-flex-direction(flex, column, center);
+
+  .sidebarContainer {
+    margin-top: 30px;
+    width: 100%;
+
+    .navLink {
+      color: $secondary-color;
+      height: 35px;
+      @include display-content(flex, center, center);
+      text-decoration: none;
+
+      &:hover{
+        color: $active-color;
+      }
+    }
+  }
+}

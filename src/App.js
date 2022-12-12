@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {Route} from 'react-router-dom';
+import CatImagesPage from './Pages/CatImagesPage';
+import {
+    createBrowserRouter,
+    RouterProvider,
+    createRoutesFromElements
+} from "react-router-dom";
+import Layout from './Components/Layout';
 
 function App() {
+
+    const routes = createBrowserRouter(createRoutesFromElements(
+        <Route path={'/'} element={<Layout/>}>
+            <Route exact path='/:id/:name' element={<CatImagesPage/>}/>
+        </Route>
+    ))
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <RouterProvider router={routes}/>
     </div>
   );
 }

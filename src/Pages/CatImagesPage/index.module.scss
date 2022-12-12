@@ -1,0 +1,27 @@
+@import "/public/assets/style/variables";
+
+.catImages {
+  width: calc(100% - 180px);
+  height: 100vh;
+  @include display-flex-direction(flex, column, center);
+
+  .button {
+    padding: 20px 0;
+
+    button {
+      width: 200px;
+      height: 40px;
+      min-height: 40px;
+      cursor: pointer;
+      font-weight: 700;
+      color: $secondary-color;
+      background: $primary-color;
+      border: none;
+      border-radius: 5px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
