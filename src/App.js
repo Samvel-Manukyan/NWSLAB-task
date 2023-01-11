@@ -9,7 +9,6 @@ import {
 import Layout from './Components/Layout';
 
 function App() {
-
     const routes = createBrowserRouter(createRoutesFromElements(
         <Route path={'/'} element={<Layout/>}>
             <Route exact path='/:id/:name' element={<CatImagesPage/>}/>

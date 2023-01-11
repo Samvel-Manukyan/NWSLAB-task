@@ -12,11 +12,11 @@ const ImagesList = ({imagesListData}) => {
     return(
         <div className={classes['imagesList']}>
             {
-                imagesListData.map((item, index) => {
-                    const {url} = item;
+                imagesListData.map((item) => {
+                    const {url, id} = item;
                     return(
                         <div
-                            key={index}
+                            key={id}
                             className={classes['imagesBlock']}
                         >
                             <img src={url} alt="image"/>
